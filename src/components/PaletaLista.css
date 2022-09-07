@@ -65,7 +65,8 @@
   border-radius: 5px;
   font-family: "Exo", sans-serif;
   padding: 5px;
-  max-width: 280px;
+  min-width: 240px;
+  max-width: 240px;
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
