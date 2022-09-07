@@ -43,6 +43,7 @@
   font-size: 1.5em;
   font-weight: 700;
   line-height: 100%;
+  min-width: 240px;
 }
 
 .PaletaListaItem__descricao {
@@ -65,7 +66,6 @@
   border-radius: 5px;
   font-family: "Exo", sans-serif;
   padding: 5px;
-  min-width: 240px;
   max-width: 240px;
   text-align: center;
   font-weight: 700;
@@ -83,7 +83,20 @@
 }
 
 .Acoes__adicionar--preencher {
-  width: 100%;
+  width: 240px;
+}
+.Acoes__adicionar--metade {
+  width: 110px;
+}
+.Acoes__adicionar--metade {
+  width: 110px;
+}
+
+.Acoes__remover--sumir {
+  display: none;
+}
+.Acoes__remover--metade {
+  width: 110px;
 }
 
 .PaletaListaItem__foto {

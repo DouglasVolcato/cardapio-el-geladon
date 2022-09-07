@@ -12,6 +12,13 @@ export function PaletaLista() {
     setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
   };
 
+  const removerItem = (paletaIndex) => {
+    const paleta = {
+      [paletaIndex]: Number(paletaSelecionada[paletaIndex] || 0) - 1,
+    };
+    setPaletaSelecionada({ ...paletaSelecionada, ...paleta });
+  };
+
   return (
     <div className="PaletaLista">
       {paletas.map((paleta, index) => (
@@ -37,9 +44,23 @@ export function PaletaLista() {
             <div className="PaletaListaItem__acoes Acoes">
               <button
                 onClick={() => adicionarItem(index)}
-                className="Acoes__adicionar Acoes__adicionar--preencher"
+                className={
+                  paletaSelecionada[index] > 0
+                    ? "Acoes__adicionar Acoes__adicionar--metade"
+                    : "Acoes__adicionar Acoes__adicionar--preencher"
+                }
               >
-                adicionar
+                Adicionar
+              </button>
+              <button
+                onClick={() => removerItem(index)}
+                className={
+                  paletaSelecionada[index] > 0
+                    ? "Acoes__remover remover--metade"
+                    : "Acoes__remover Acoes__remover--sumir"
+                }
+              >
+                Remover
               </button>
             </div>
           </div>
