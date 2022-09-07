@@ -16,9 +16,14 @@ export function PaletaLista() {
     <div className="PaletaLista">
       {paletas.map((paleta, index) => (
         <div className="PaletaListaItem" key={`PaletaListaItem-${index}`}>
-          <span className="PaletaListaItem__badge">
-            {paletaSelecionada[index] || 0}
-          </span>
+          {paletaSelecionada[index] > 0 ? (
+            <span className="PaletaListaItem__badge">
+              {paletaSelecionada[index]}
+            </span>
+          ) : (
+            <span></span>
+          )}
+
           <div>
             <div className="PaletaListaItem__titulo"> {paleta.titulo} </div>
             <div className="PaletaListaItem__preco">
